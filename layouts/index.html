@@ -1,0 +1,85 @@
+{{ define "main" }}
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="logo-title">
+            {{ $ctx := dict "vendor" "lucide" "name" "package" "width" "32" "height" "32" "className" "icon primary" }}
+            {{ partial "icons/icon" $ctx }}
+            <h1>{{ .Title }}</h1>
+        </div>
+        <p class="lead">Generate APT repositories from GitHub repos with a simple bash script. No complexity, no hassle - just packages ready to distribute.</p>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why">
+        <div class="section-header">
+            {{ $ctx := dict "vendor" "lucide" "name" "message-circle-question" "className" "icon primary" }}
+            {{ partial "icons/icon" $ctx }}
+            <h2>Why This Exists</h2>
+        </div>
+        <p>
+            Setting up native package repositories is tedious, which is why many developers 
+            on small hobby projects don't even bother. I can't tell you how many times I've found 
+            a bespoke application on the web and installed it manually only to completely forget about it. 
+            Mainly I just wanted to see how difficult it would be to create a solution to handle package 
+            distribution automatically, as just a user of the software and not the maintainer. 
+            Thankfully, in Python this was pretty easy to get working. 
+            I tried doing this in JavaScript but I almost had an aneurism trying to get the necessary 
+            decryption libraries working correctly.
+        </p>
+    </section>
+
+    <!-- Installation -->
+    <section class="installation">
+        <div class="section-header">
+            {{ $ctx := dict "vendor" "lucide" "name" "hard-drive-download" "className" "icon primary" }}
+            {{ partial "icons/icon" $ctx }}
+            <h2>Quick Start</h2>
+        </div>
+        <div class="code-block">
+            <pre><code># Install globally
+npm install -g no-package-left-behind
+
+# Generate APT repo from GitHub repository
+nplb generate owner/repo --output ./apt-repo</code></pre>
+        </div>  
+        <details class="collapsible">
+            <summary>
+                {{ $ctx := dict "vendor" "lucide" "name" "message-circle-warning" "className" "github-icon" }}
+                {{ partial "icons/icon" $ctx }}
+                Disclaimer
+            </summary>
+            <div class="content">
+                <p>
+                    This is beta software meant mainly as a proof of concept. 
+                    The topic of Software Supply Chain security is incredibly complex and the current implementation of this project has many potential issues from a security perspective. 
+                    There is a single PGP key used to sign all packages. Depending on how far I end up taking this project, I might provide more sophisticated signing capabilities, 
+                    but I just want to let any potential users of this service be aware of the potential risks.
+                </p>
+                <p>
+                    The API for this project does not have any test coverage yet, so it is quite likely users could encounter some bugs. If you find this service useful and encounter an  issue, 
+                    I welcome anyone to submit an issue here: <a href="https://github.com/zjpiazza/nplb/issues/new/choose">New Issue</a>
+                </p>
+            </div>
+        </details>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Single command repository generation</li>
+            <li>Automatic package signing and verification</li>
+            <li>Compatible with all major Debian-based distributions</li>
+            <li>Zero configuration required</li>
+        </ul>
+    </section>
+
+    <!-- GitHub Link -->
+    <a href="https://github.com/zjpiazza/nplb" class="github-link">
+        {{ $ctx := dict "vendor" "bootstrap" "name" "github" "className" "github-icon" }}
+        {{ partial "icons/icon" $ctx }}
+        View on GitHub
+    </a>
+</main>
+{{ end }} 
