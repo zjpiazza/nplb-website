@@ -3,8 +3,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="logo-title">
-            {{ $ctx := dict "vendor" "lucide" "name" "package" "width" "32" "height" "32" "className" "icon primary" }}
-            {{ partial "icons/icon" $ctx }}
+            <img src="https://unpkg.com/lucide-static@latest/icons/package.svg" class="icon primary" width="32" height="32" />
             <h1>{{ .Title }}</h1>
         </div>
         <p class="lead">Generate APT repositories from GitHub repos with a simple bash script. No complexity, no hassle - just packages ready to distribute.</p>
@@ -13,8 +12,7 @@
     <!-- Why Section -->
     <section class="why">
         <div class="section-header">
-            {{ $ctx := dict "vendor" "lucide" "name" "message-circle-question" "className" "icon primary" }}
-            {{ partial "icons/icon" $ctx }}
+            <img src="https://unpkg.com/lucide-static@latest/icons/message-circle-question.svg" class="icon primary" />
             <h2>Why This Exists</h2>
         </div>
         <p>
@@ -32,8 +30,7 @@
     <!-- Installation -->
     <section class="installation">
         <div class="section-header">
-            {{ $ctx := dict "vendor" "lucide" "name" "hard-drive-download" "className" "icon primary" }}
-            {{ partial "icons/icon" $ctx }}
+            <img src="https://unpkg.com/lucide-static@latest/icons/hard-drive-download.svg" class="icon primary" />
             <h2>Quick Start</h2>
         </div>
         <div class="code-block">
@@ -45,8 +42,7 @@ nplb generate owner/repo --output ./apt-repo</code></pre>
         </div>  
         <details class="collapsible">
             <summary>
-                {{ $ctx := dict "vendor" "lucide" "name" "message-circle-warning" "className" "github-icon" }}
-                {{ partial "icons/icon" $ctx }}
+                <img src="https://unpkg.com/lucide-static@latest/icons/message-circle-warning.svg" class="github-icon" />
                 Disclaimer
             </summary>
             <div class="content">
@@ -77,8 +73,7 @@ nplb generate owner/repo --output ./apt-repo</code></pre>
 
     <!-- GitHub Link -->
     <a href="https://github.com/zjpiazza/nplb" class="github-link">
-        {{ $ctx := dict "vendor" "bootstrap" "name" "github" "className" "github-icon" }}
-        {{ partial "icons/icon" $ctx }}
+        <img src="https://unpkg.com/lucide-static@latest/icons/github.svg" class="github-icon" />
         View on GitHub
     </a>
 </main>

@@ -50,6 +50,7 @@ section {
 
 .icon.primary {
     color: var(--primary);
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(143deg) brightness(119%) contrast(101%);
 }
 
 h1 {
