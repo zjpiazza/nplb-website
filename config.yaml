@@ -4,4 +4,4 @@ title: "No Package Left Behind"
 deployment:
   targets:
     - name: production
-      URL: "s3://nplb-website?region=us-east-1
+      URL: "s3://nplb-website?region=us-east-1"
